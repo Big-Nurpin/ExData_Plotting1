@@ -26,7 +26,7 @@ with(powerData, {
 par(xaxt = "s")
 axis(1, at = c(0, 1440, 2880), labels = c("Thu", "Fri", "Sat"))
 ##Add legend to the top-right
-legend("topright", legend = c("Sub_metering_1", "Sub_metering_2",
+legend(1800, 36, legend = c("Sub_metering_1", "Sub_metering_2",
                                        "Sub_metering_3"),
        col = c("black", "red","blue"), lty = 1, cex = 1)
 
