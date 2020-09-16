@@ -12,7 +12,7 @@ powerData <- read.table("household_power_consumption.txt",
 powerData <- powerData[66637:69516, ]
 
 ##Turn off x-axis labels and uses 4 graphs on plot
-par(xaxt = "n", mfrow = c(2, 2), mar = c(4, 4.1, 4, 2.1))
+par(xaxt = "n", mfrow = c(2, 2), mar = c(5.1, 4.1, 2, 2.1))
 
 ##Plot graphs
 with(powerData, {
@@ -43,3 +43,7 @@ with(powerData, {
     par(xaxt = "s")
     axis(1, at = c(0, 1440, 2880), labels = c("Thu", "Fri", "Sat"))
 })
+
+##Export to png file
+dev.copy(png, file = "plot4.png")
+dev.off()
